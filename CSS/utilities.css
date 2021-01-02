@@ -1,0 +1,228 @@
+/*Since, we are using so many utilities classes it is better to define a new css file and it will make our code clean. */
+:root {
+  --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --error-color: #d9534f;
+  --success-color: #5cb85c;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: auto;
+}
+
+.card {
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 20px;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+}
+.btn:hover {
+  transform: scale(0.98);
+}
+
+/* Backgrounds and colored buttons */
+
+/*(v.v.imp.) NOTE-: we are defining these classes after .btn class, because in css, a class redefined will override the previous class statements. ex-: we were using .btn and .btn-dark in <a> tag in cloud section if we would have defined .btn-dark before .btn than the dark color won't appear on the Read More button.  */
+.bg-primary,
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+.bg-secondary,
+.btn-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+.bg-dark,
+.btn-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+.bg-light,
+.btn-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.bg-primary a,   /*it is for all the <a> tag used as a button or with a .bg- class */
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+  color: #fff;
+}
+
+/* text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.text-dark {
+  color: var(--dark-color);
+}
+.text-light {
+  color: var(--light-color);
+  color: #333;
+}
+
+/* Text-sizes*/
+.lead {
+  font-size: 20px;
+}
+.sm {
+  font-size: 1rem;
+}
+.md {
+  font-size: 2rem;
+}
+.lg {
+  font-size: 3rem;
+}
+.xl {
+  font-size: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Alert */
+.alert {
+  background: var(--light-color);
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+.alert i {
+  margin-right: 5px;
+}
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+.alert-error {
+  background: var(--error-color);
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*Margin*/
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 1.5rem 0;
+}
+.my-3 {
+  margin: 2rem 0;
+}
+.my-4 {
+  margin: 3rem 0;
+}
+.my-5 {
+  margin: 4rem 0;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 1rem;
+}
+.m-3 {
+  margin: 1rem;
+}
+.m-4 {
+  margin: 1rem;
+}
+.m-5 {
+  margin: 1rem;
+}
+
+/*Padding*/
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 1.5rem 0;
+}
+.py-3 {
+  padding: 2rem 0;
+}
+.py-4 {
+  padding: 3rem 0;
+}
+.py-5 {
+  padding: 4rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 1.5rem;
+}
+.p-3 {
+  padding: 2rem;
+}
+.p-4 {
+  padding: 3rem;
+}
+.p-5 {
+  padding: 4rem;
+}
+
+/*NOTE-: to change/select multiple things put cursor from where you want to change the text than press ctl + d  and than press only d while holding ctrl. */
+
+/* (v.v.imp.) NOTE-: How to use netlify free forms-: https://www.youtube.com/watch?v=6ElQ689HRcY */
+
+/* (v.v.imp.) NOTE-: How to Deploy your website or static pages using netlify -: https://www.youtube.com/watch?v=bjVUqvcCnxM */
+
+/*(v.v.v.imp.) NOTE-: when you are defining utilities classes always define structural classes(like- .card .grid .container, etc.) on 
+                      top and designing classes(like-: .bg- .btn- .py- .my- , etc.) on bottom, beacuse when you use multiple classes 
+inside a element the order of applying css depends upon specificity and this is the specificity order-: 1-: inline 2-: id 3-: classes,
+ pseudo classes,attributes 4-: element , but if we are using only classes than order is decided by the occurrence of those classes in 
+ the css stylesheet. Also when css of any class is not applied on the browser than check using inspect-inside style box and there check 
+ which property of which class is being overridden(or not used) and according to that change the order of occurence of classes in the 
+ stylesheet.*/

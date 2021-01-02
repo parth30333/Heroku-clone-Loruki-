@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <!--this is similar to downloading bootstrap using max cdn, it allows us to use all fontAwesome classes to create diff. fonts just like we could use bootstrap classes.-->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loruki | Hosting for Everyone.</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <!--navbar to hold the logo of the site, which is necessary.-->
+      <div class="container flex">
+        <!--another container to wrap up the logo-->
+        <h1 class="logo">Loruki</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="docs.html">docs</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--Showcase -->
+    <section class="showCase">
+      <div class="container grid">
+        <!--showCase-text and showCase-form are 2 grid items inside the .grid div-->
+        <div class="showCase-text">
+          <h1>Easy Deployment</h1>
+          <p>
+            Deploy web apps of all kinds, from large scale enterprise APIs to
+            static websites for individuals. Fill out the form to try a demo of
+            our platform
+          </p>
+          <a href="features.html" class="btn btn-outline">Read More</a>
+        </div>
+
+        <div class="showCase-form card">
+          <h2>Request a Demo</h2>
+          <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden">
+              <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
+            <div class="form-control">
+              <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-control">
+              <input
+                type="text"
+                name="company"
+                placeholder="Company Name"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <input type="submit" value="send" class="btn btn-primary" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--Stats Section-->
+    <section class="stats">
+      <div class="container">
+        <h3 class="stats-heading text-center my-1">
+          <!--"my-1"  is margin in y-direction-->
+          Welcome to the best platform for building applications of all types
+          with modern architecture and scaling
+        </h3>
+
+        <div class="grid grid-3 text-center my-4">
+          <!--grid-3 is used because in the .grid class there were only two columns, to introduce a new column .grid-3 is used.-->
+          <div>
+            <i class="fas fa-server fa-3x"></i>
+            <h3>10,349,405</h3>
+            <p class="text-secondary">Deployments</p>
+          </div>
+          <!-- div*3 = gives you 3 divs.-->
+          <div>
+            <i class="fas fa-upload fa-3x"></i>
+            <h3>947 TB</h3>
+            <p class="text-secondary">Published</p>
+          </div>
+          <div>
+            <i class="fas fa-project-diagram fa-3x"></i>
+            <h3>2,453,875</h3>
+            <p class="text-secondary">Projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- cli Section -->
+    <section class="cli">
+      <div class="container grid">
+        <img src="images/cli.png" alt="cli image" />
+        <div class="card">
+          <h3>Easy to use, cross platform CLI</h3>
+        </div>
+        <div class="card">
+          <h3>Deploy in seconds</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- cloud -->
+    <section class="cloud my-2 py-2 bg-primary">
+      <div class="container grid">
+        <div class="text-center">
+          <h2 class="lg">Extreme cloud hosting.</h2>
+          <p class="lead my-1">
+            Cloud hosting like you've never seen. Fast, efficient and scalable
+          </p>
+          <a href="features.html" class="btn-dark btn my-1">Read More</a>
+        </div>
+        <img src="images/cloud.png" alt="cloud image" />
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="languages">
+      <h2 class="text-center md my-2">
+        Supported Languages
+      </h2>
+      <div class="container flex">
+        <div class="card text-center">
+          <h4>Node.js</h4>
+          <img src="images/logo/node.png" alt="">
+        </div>
+        <div class="card text-center">
+          <h4>Python</h4>
+          <img src="images/logo/python.png" alt="">
+          </div>
+          <div class="card text-center">
+            <h4>C#</h4>
+            <img src="images/logo/csharp.png" alt="">
+          </div>
+          <div class="card text-center">
+            <h4>Ruby</h4>
+            <img src="images/logo/ruby.png" alt="">
+          </div>
+          <div class="card text-center">
+            <h4>PHP</h4>
+            <img src="images/logo/php.png" alt="">
+          </div>
+          <div class="card text-center">
+            <h4>Scala</h4>
+            <img src="images/logo/scala.png" alt="">
+          </div>
+          <div class="card text-center">
+            <h4>Clojure</h4>
+            <img src="images/logo/clojure.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark">
+      <div class="container grid grid-3">
+        <div>
+          <h1>Loruki</h1>
+          <p>Copyrights &copy; 2020</p>
+        </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="faetures.html">Features</a></li>
+          <li><a href="docs.html">Docs</a></li>
+        </ul>
+      </nav>
+
+      <nav>
+        <div class="social">
+          <a href="https://github.com/"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="https://twitter.com/LOGIN"><i class="fab fa-twitter fa-2x"></i></a>
+        </div>
+      </nav>
+    </div>  
+    </footer>
+  </body>
+</html>
+
+<!-- (v.v.imp.) NOTE-: How to use netlify free forms-: https://www.youtube.com/watch?v=6ElQ689HRcY -->
+
+<!-- (v.v.imp.) NOTE-: How to Deploy your website or static pages using netlify -: https://www.youtube.com/watch?v=bjVUqvcCnxM -->
